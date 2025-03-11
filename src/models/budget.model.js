@@ -15,6 +15,10 @@ const budgetSchema = mongoose.Schema(
       type: Number,
       required: [true, "Budget limit is required."],
     },
+    spent: {
+      type: Number,
+      default: 0,
+    },
     month: {
       type: Number,
       min: 1,

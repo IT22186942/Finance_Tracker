@@ -7,6 +7,7 @@ import auth from "./routes/auth.route.js";
 import user from "./routes/user.route.js";
 import transaction from "./routes/transaction.route.js";
 import budget from "./routes/budget.route.js";
+import report from "./routes/report.route.js";
 
 const app = express();
 
@@ -36,7 +37,7 @@ app.use("/api/auth", auth);
 app.use("/api/user", user);
 app.use("/api/transaction", transaction);
 app.use("/api/budget", budget);
-// app.use("/api/report", report);
+app.use("/api/report", report);
 
 app.listen(LOCALHOST_SERVER_PORT, (req, res) => {
   connectDb();
